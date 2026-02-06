@@ -1,0 +1,175 @@
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+    cursor: url('./images/pointer.png'), auto;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+    background: #111;
+}
+
+#valentinesButton {
+    display: none;
+    position: absolute;
+    background-color: #2d2dff;
+    border: 2px solid #2d2dff;
+    color: #fff;
+    cursor: pointer;
+    height: 50px;
+    font-size: 16px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    border-radius: 10px;
+    top: calc(50% + 150px); /* Adjust based on canvas height and text position */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  #valentinesButton:hover {
+    background-color: #1f1faa;
+    color: #eee;
+}
+
+#choiceButtons {
+  display: none;
+  position: absolute;
+  top: calc(50% + 180px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 80px;
+}
+
+#teaseText {
+  position: absolute;
+  top: calc(50% + 260px);
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+#yesBtn, #noBtn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 18px;
+  font-family: "Comic Sans MS", cursive;
+  padding: 12px 26px;
+  border-radius: 12px;
+  margin: 10px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: transform 0.2s ease;
+}
+
+#yesBtn:hover {
+  background-color: rgba(255,255,255,0.15);
+}
+
+#noBtn {
+  position: relative;
+}
+
+#carouselSection {
+  display: none;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 90%;
+  max-width: 500px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 420px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.4);
+
+  /* 🔑 Centering system */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.carousel-img.active {
+  opacity: 1;
+}
+
+
+.loveMessage {
+  margin-top: 25px;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+#passwordOverlay {
+  position: fixed;
+  inset: 0;
+  background: #0b0b16;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.passwordBox {
+  text-align: center;
+  color: white;
+  font-family: "Comic Sans MS", cursive;
+  background: rgba(255,255,255,0.05);
+  padding: 30px 40px;
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(255,255,255,0.15);
+}
+
+.passwordBox input {
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 200px;
+  text-align: center;
+}
+
+.passwordBox button {
+  margin-top: 15px;
+  padding: 10px 22px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #2d2dff;
+  color: white;
+}
+
+#errorMsg {
+  margin-top: 10px;
+  color: #ff8080;
+  font-size: 14px;
+}
+
